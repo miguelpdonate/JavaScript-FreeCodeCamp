@@ -129,6 +129,75 @@ var myStr = "Learning to code is ";
 myStr += someAdjective;
 console.log(myStr)
 */
-var hello = "hello world"
-console.log(hello)
+ 
 
+/* KNOWING THE LEMGTH OF A STRING
+var firstNameLength = 0;
+var firstName = "Miguel"
+
+firstNameLength = firstName.length
+
+
+
+var lastNameLength = 0;
+var lastName = "Perez";
+
+
+lastNameLength = lastName.length;
+
+console.log(lastName)
+console.log(lastNameLength)
+*/
+
+/* BRACKET NOTATION
+var firstLetterOfFirstName = "";
+var firstName = "Miguel";
+
+firstLetterOfFirstName = firstName[0];
+
+console.log(firstLetterOfFirstName)
+*/
+
+
+/* STRING IMMUTABILITY / BUT WHY NECESARY IF YOU CAN JUST CHANGE THE STRING???????
+var myStr = "jello world";
+
+myStr = "Hello World";
+*/
+
+/* THIS IS TO FIND THE NTH CHARACTER OF A STRING VARIABLE
+var firstname = "Miguel"
+var lastLeterOfFirstName = firstname[firstname.length - 1]
+console.log(lastLeterOfFirstName)
+*/
+
+
+
+
+/* THIS IS TO ADD BLANKS OR SPACES TO YOUR STRING SENTENCES 
+BUT WHY CAN'T YOU JUST WRITE A SENTENCE WITH SPACES IN A STRING?????
+
+function wordBlank (myNoun, myAdjective, myVerb, myAdverb) {
+
+
+var result = "";
+result += "The" + myAdjective + myNoun + myVerb + "to the store" + myAdverb
+
+return result;
+}
+
+console.log(wordBlank("dog ", " big ", "ran ", "quickly "));
+*/
+
+/* THIS IS AN ARRAY TO STORE MULTIPLE VALUES IN A VARIABLE 
+
+var ourArray = ["John", 23];
+var myArray = [];
+
+*/
+
+
+/* NESTING ARRAYS
+var ourArray = [["the universe", 43], ["evrything", 101010]]
+console.log(ourArray)
+*/
