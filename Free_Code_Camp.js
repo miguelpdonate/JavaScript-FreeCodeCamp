@@ -1,0 +1,134 @@
+/* DATA TYPES  
+undefined, nulll, boolean, string, symbol, number and object
+
+var myName = "Miguel"
+
+myName = 8
+
+let ourName = "FreeCodeCamp"
+
+const pi = 3.14
+*/
+
+
+/* STORING VALUES WITH THE ASSINGMENTS OPERATOR
+var a;
+var b = 2;
+
+console.log (b) 
+*/
+
+
+/* UNINITIALIZED VARIABLES 
+var a = 5;
+var b = 10;
+var c = "I am a ";
+
+
+a = a + 1;
+b = b + 5;
+c = c + "String!"
+*/
+
+
+
+/* BASIC MATH, ADDING, SUBTRACTING, MULTIPLYING AND DIVIDING
+var sum = 10 + 10;
+var difference = 50 - 20;
+var product = 8 * 10;
+var quotient = 66 / 33;
+*/
+
+/* INCREMENT AND DECREMENT 
+myVar = 49
+myVar = myVar + 1; 
+
+OR
+
+myVar--;
+*/
+
+/* DECIMAL NUMBERS 
+var ourDecimal = 5.7
+var myDecimal = 0.009
+DO THEY WORK WITH COMAS??
+*/
+
+/*
+var product = 2.5 * 50;
+console.log(product)
+*/
+
+/* FINDING A REMAINDER AKA PERCANTAGE CALCULING 
+var remainder;
+remainder = 50 % 100; 
+console.log(remainder)
+*/
+
+/*AUGMENTED MATH OPERATIONS 
+var a = 3;
+var b = 17;
+var c = 12;
+
+a += 12;
+b += 9;
+c += 7;
+
+// ASLO WORKS WITH SUBTRACTION, MULTIPLICATION AND DIVISION 
+REPLACE THE + WITH THE PROPER CHARACTER *, / OR - 
+
+console.log(a);
+console.log(b);
+console.log(c);
+*/
+
+
+/* MAKING STRING VARIABLES 
+var firstName = "Miguel";
+var lastName = "Perez";
+*/
+
+/*ESCAPING LITERAL QUOTES (but not alwaysa necesary see below)
+var myStr = "I am a \"double quoted\" string inside \"double quotes \"";
+console.log(myStr)
+*/
+
+/*QUOTING STRINGS WITH SINGLE QUOTES BUT CAN ALSO BE DONE WITH BACKQUOTES
+AND SINGLE QUOTES INSIDE DOUBLEQUOTES 
+
+var hello = 'hello world inside "quotes" '
+console.log(hello)
+*/
+
+/* THIS IS PUTTING STRINGS TOGETHER BUT WITH A PLUS SIGN
+
+var ourStr = "I come first. " + "I come second."; 
+var myStr = "This is the start." + " This is the end"
+console.log(ourStr);
+*/
+
+/*
+var ourStr = "I'm the first sentence. ";
+ourStr += "I am the second."
+console.log(ourStr)
+*/
+
+/* 
+var myName = "Miguel";
+var myStr = "Hello, my name is " + myName + ", how are you?"
+
+console.log(myStr)
+*/
+
+
+/*APPENDING VARIABALES TO STRINGS. THE += IS TO ADD BOTH VARIABLES TOGETHER 
+AND BEING ABLE TO CONSOLE.LOG THEM TOGETHER
+
+var someAdjective = "worthwhile";
+var myStr = "Learning to code is ";
+myStr += someAdjective;
+console.log(myStr)
+*/
+var hello = "hello world"
+console.log(hello)
+
