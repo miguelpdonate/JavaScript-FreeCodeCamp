@@ -268,6 +268,7 @@ console.log(myArray);
 
 // Monitor settings
 
+/* HOW TO INCREASE AN ARRAY FROM A OTHER JS FILE
 var myMonitorModel = 2022;
 var myMonitor = [["Brightness", [1, 2, 3]], ["Contrast", [5, 10,15]], ["Volumen", [20, 30, 40]]];
 //console.log(myMonitor);
@@ -278,5 +279,74 @@ for (let index = 0; index < myMonitor.length; index++) {
 
 languageSetting(myMonitorModel, myMonitor);
 console.log(myMonitor);
+*/
 //console.log(myMonitor [2][1]);
-// ffff 
+
+// var currencies = ["Dollar", "Pesetas", "Franco Belga", "Lira Italiana"];
+// console.log(currencies[0]);
+// console.log(currencies[1]);
+// console.log(currencies[2]);
+// console.log(currencies[3]);
+
+// console.log("currencies of the world as of 2000");
+
+// for (let index = 0; index < currencies.length; index++) {
+//     const element = currencies[index];
+//     console.log(element);
+    
+// }
+
+// console.log("*** currencies of the world as of 2001");
+
+// for (let a = 3; a > 0; a--) {
+//     console.log("   **** Before removing element from currencies (pop)")
+//     console.log(`      The value of a is ${a}`)
+//     console.log(`      The length of currencies is ${currencies.length}`)
+
+//     currencies.pop();
+
+//     console.log("   **** After removing element from currencies (pop)")
+//     console.log(`      The value of a is ${a}`)
+//     console.log(`      The length of currencies is ${currencies.length}`)
+// }
+
+// console.log(currencies);
+
+/*REMOVE FIRST ELEMENTS FROM AN ARRAY WITH SHIFT 
+personsWithPets = [["Perez", "Annabelle", ["Honey", "Toffee", "Oreo", "Waffle"]], ["Elias", "Olivia", ["Mitzy", "Maggie"]] ];
+
+console.log(personsWithPets);
+
+personsWithPets[1][2].shift();
+
+console.log(personsWithPets);
+*/
+
+/* ADD A ELEMENT TO THE FIRST WITH UNSHIFT
+var myArray = [["Miguel", 18], ["dog", 13]]
+myArray.shift();
+
+myArray.unshift(["Tony", 58])
+*/
+
+// var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]]
+
+/* ARGUMENTS 
+function ourFunctionWithArgs(a, b){
+    console.log(a - b);
+}
+ourFunctionWithArgs(10, 5);
+*/
+
+// GLOBAL SCOPE
+
+ 
+
+
+
+
+
+
+
+
+
