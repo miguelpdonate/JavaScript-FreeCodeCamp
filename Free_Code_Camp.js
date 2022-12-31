@@ -189,6 +189,45 @@ return result;
 console.log(wordBlank("dog ", " big ", "ran ", "quickly "));
 */
 
+// function wordBlank (myAdjective,  myNoun, myVerb, myAdverb) {
+//     var result = "";
+//     result += "The " + myAdjective + myNoun + myVerb + "to the store " + myAdverb
+    
+//     return result;
+// }
+    
+// console.log(wordBlank("dog ", " big ", "ran ", "quickly "));
+// console.log(wordBlank("Miguel ", " little ", "walk ", "quickly "));
+// console.log(wordBlank("This is the first parameter (myNoun) ", " this is the second parameter (myAdjective) ", "this is the third parameter (myVerb) ", "this is the fourth parameter (myAdverb) "));
+    
+/*
+function division (first, second) {
+    result = first / second;
+    return result;
+}
+
+function multiply (first, second) {
+    result = first * second;
+    return result;
+}
+
+for (let variable = 1; variable <= 5; variable++) {
+    console.log(multiply(100, variable));
+    console.log(division(100, variable));
+}
+*/
+// console.log(division(100, 1));
+// console.log(division(100, 2));
+// console.log(division(100, 3));
+// console.log(division(100, 4));
+// console.log(division(100, 5));
+// console.log(division(100, 6));
+// console.log(division(100, 7));
+// console.log(division(100, 8));
+// console.log(division(100, 9));
+
+
+
 /* THIS IS AN ARRAY TO STORE MULTIPLE VALUES IN A VARIABLE 
 
 var ourArray = ["John", 23];
@@ -197,7 +236,46 @@ var myArray = [];
 */
 
 
-/* NESTING ARRAYS
+/*
 var ourArray = [["the universe", 43], ["evrything", 101010]]
 console.log(ourArray)
 */
+
+
+/* MODIFY ARRAY DATA 
+var a,b,c;
+var myArray = [18,64,99];
+
+a = myArray[0];
+b = myArray[1];
+c = myArray[2];
+
+for (let index = 0; index < myArray.length; index++) {
+    console.log(myArray[index]);
+ 
+}
+
+console.log(a,b,c);
+myArray[0] = 45;
+console.log(myArray);
+*/
+
+
+// var myTrunk = [[ ["Chicken breast", "Chickenleg", "Chickenwing"], ["Apples", "Grapes", "Pears" ], ["Ham", "Cheese", "Butter"], [["Peunut Butter", "Chocolate", "Speculoos"], "Bread", "Cookies"]] ];
+
+// var myGroceryItem = myTrunk[0][3][1];//[3];
+// console.log(myGroceryItem);
+
+// Monitor settings
+
+var myMonitorModel = 2022;
+var myMonitor = [["Brightness", [1, 2, 3]], ["Contrast", [5, 10,15]], ["Volumen", [20, 30, 40]]];
+//console.log(myMonitor);
+for (let index = 0; index < myMonitor.length; index++) {
+    console.log(myMonitor[index][1][2]);
+    
+}
+
+languageSetting(myMonitorModel, myMonitor);
+console.log(myMonitor);
+//console.log(myMonitor [2][1]);
