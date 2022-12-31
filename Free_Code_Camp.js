@@ -273,7 +273,7 @@ var myMonitor = [["Brightness", [1, 2, 3]], ["Contrast", [5, 10,15]], ["Volumen"
 //console.log(myMonitor);
 for (let index = 0; index < myMonitor.length; index++) {
     console.log(myMonitor[index][1][2]);
-    
+     
 }
 
 languageSetting(myMonitorModel, myMonitor);
