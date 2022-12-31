@@ -4,3 +4,4 @@ function languageSetting(monitorModel, monitor) {
     }
     return monitor;
 }
+// Reviewd by Miguel
