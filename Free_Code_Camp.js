@@ -338,10 +338,90 @@ function ourFunctionWithArgs(a, b){
 ourFunctionWithArgs(10, 5);
 */
 
-// GLOBAL SCOPE
+/* GLOBAL SCOPE
+function myLocalScope() {
+    var myVar = 5;
+    console.log(myVar);
+}
+myLocalScope();
+console.log(myVar);
+*/
 
- 
 
+/*GLOBAL VS LOCAL SCOPE FUNCTIONS
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+    var outerWear = "sweater";
+
+    return outerWear;
+}
+
+console.log(myOutfit());
+console.log(outerWear);
+*/
+
+/*
+function minusSeven(num){
+    console.log(`${num} - 7`);
+    return num - 7;
+}
+
+for (let index = 0; index < 100; index++) {
+    console.log(minusSeven(index));
+}
+*/
+
+
+
+/* ASSIGNMENT WITH A RETURNED VALUE 
+var changed = 20;
+console.log(changed);
+
+function change(num) {
+    return (changed + num + 5) / 3;
+}
+
+changed = change(10);
+
+console.log(changed);
+*/
+
+/* LINEUP STAND IN LINE 
+function nextInLine(lineUp, player){
+    lineUp.push(player);
+    return lineUp.shift();
+}
+
+var team = ["Miguel", "Papo", "Bill", "Nori", "Lara"];
+
+
+console.log("Before: " + team); //JSON.stringify(team));
+console.log(nextInLine(team, "Chris"));
+console.log("After: "  + team); //JSON.stringify(team))
+*/
+
+/*TRUE OR FALSE
+function trueOrFalse(wasThatTrue){
+    if (wasThatTrue){
+        return "Yes, that was true";
+    }
+    return "No, that was fase";
+}
+
+console.log(trueOrFalse(false));
+*/
+
+function testStrictNotEqual(val){
+    if (val === 17){
+        console.log("Not Equal!");
+    } else {
+        console.log("Equal");
+
+    }
+}
+
+testStrictNotEqual(17);
 
 
 
