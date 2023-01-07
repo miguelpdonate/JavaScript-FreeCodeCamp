@@ -412,16 +412,259 @@ function trueOrFalse(wasThatTrue){
 console.log(trueOrFalse(false));
 */
 
+/*
 function testStrictNotEqual(val){
     if (val === 17){
-        console.log("Not Equal!");
+        console.log(" Equal!");
     } else {
-        console.log("Equal");
+        console.log("Not Equal");
 
     }
 }
 
-testStrictNotEqual(17);
+testStrictNotEqual(87);
+*/
+
+
+/* && STATEMENTS 
+function country_colors(color1, color2, color3){
+    if (color1 === "red" && color2 === "yellow") {
+        return "The colors you sent are from the flag of Spain";
+    }
+    if (color1 === "red" && color2 === "yellow" && color3 === "black") {
+        return "The colors you sent are from the flag of Belgium";
+    }
+    if (color1 === "red" && color2 === "white" && color3 === "blue") {
+        return "The colors you sent are from the flag of France";
+    }
+    return "Unknown country";
+}
+
+function country_capital(capital){
+    if (capital === "Madrid") {
+        return "And that is what we call the 'capital' of Spain";
+    }
+    if (capital === "Brussels") {
+        return "That's the capital of Belgium";
+    }
+    if (capital === "Paris") {
+        return "You sent me the capital of France";
+    }
+
+    return "Unknown capital";
+}
+
+capitals = ["Brussels", "Madrid", "Paris"];
+
+console.log(country_colors("red", "white", "blue"));
+
+for (let index = 0; index < capitals.length; index++) {
+    console.log(country_capital(capitals[index]));
+    
+}
+*/
+
+/* OR STATEMENTS
+function testLogicalOr(val) {
+    if (val < 10 || val > 20){
+        return "Outside";
+    }
+
+    return "inside";
+}
+
+let myResult;
+
+myResult = testLogicalOr(15);
+
+console.log(myResult);
+*/
+
+/* ELSE STATEMENTS 
+function testElse(val){
+    var result = "";
+
+    if (val > 5) {
+        result = "Bigger than 5";
+    } else {
+        result = "5 or Samller";
+    }
+
+    return result;
+}
+let myAnswer;
+
+myAnswer = testElse(5);
+console.log(myAnswer)
+*/
+
+/* Else If + For Loop 
+function testElseIf(val){
+    console.log(`The value of val is ${val}`);
+    if (val > 10){
+        return "Greater then 10";
+    } else if (val < 5){
+        return "Smaller than 5";
+    } else{
+        return "Between 5 and 10";
+    }
+}
+
+
+let myAnswer;
+myAnswer = testElseIf(7);
+console.log(myAnswer);
+
+for (let number = 0; number < 11; number++) {
+    const myAnswer2 = testElseIf(number);
+    // console.log(myAnswer2);    
+}
+
+*/
+
+
+/* MODULAR FUNCTIONS AND IF/ELSE IF STATEMENTS */
+
+/*
+let players = ["Miguel", "Nori", "Bill", "Christophe", "Lara", "Koji", "Yuki", "Papo", "Juan Carlos"]
+let atBats  = [20,        35,     33,     15,           22,    44,      23,     27,     41];
+let hits    = [5,         8,      12,     18,           3,     23,      20,     15,     10];
+let k       = [1,         5,      10,     2,            5,     20,      12,     8,      10];
+let pitcher = [true,      true,   false,  false,        true,  false,   false,  false,  true];
+let pRuns   = [5,         3,      null,   null,         7,     null,    null,   null,   7];
+let pInning = [33,        15,     null,   null,         28,    null,    null,   null,   29];
+
+function calculateAvg(currentPlayerName, currentPlayerHits, currentPlayerAtBats){
+    let avg = currentPlayerHits / currentPlayerAtBats;
+    console.log(`${currentPlayerName} had ${currentPlayerAtBats} at bats and ${currentPlayerHits} hits`);
+    console.log(`The batting average for ${currentPlayerName} is ${avg}`);
+}
+
+function whiffs(player, strikeOuts){
+    console.log(`${player} striked out ${strikeOuts} times`);
+}
+
+function calculateERA(pitcherName, runs, innings){
+    let era = 9 * runs / innings;
+    console.log(`The pitcher ${pitcherName} had an E.R.A. of ${era}`)
+}
+
+function playerSeasonDetails(currentPlayerName, currentPlayerHits, currentPlayerAtBats, strikeOuts, isPitcher, runs, innings){
+    console.log(`***** Season Details for ${currentPlayerName} *****`)
+    calculateAvg(currentPlayerName, currentPlayerHits, currentPlayerAtBats);
+    whiffs(currentPlayerName, strikeOuts);
+    if (isPitcher) {
+        calculateERA(currentPlayerName, runs, innings);
+    } else {
+        console.log(`${currentPlayerName} is not a pitcher`);
+    }
+}
+
+// let suppose, the user has a menu with options:
+// 1. Print all Team's Season details
+// 2. Print all Team's Season batting average
+// 3. Print all Team's Pitecher E.R.A.
+// 4. Print Indidual Player Season Details
+
+
+let option = 99;
+
+switch (option) {
+    case 1:  // 1. Print all Team's Season details
+        for (let playerNumber = 0; playerNumber < players.length; playerNumber++) {
+            playerSeasonDetails(players[playerNumber], hits[playerNumber], atBats[playerNumber], k[playerNumber], pitcher[playerNumber], pRuns[playerNumber], pInning[playerNumber]);
+        }
+        break;
+    case 2:  // 2. Print all Team's Season batting average
+        for (let playerNumber = 0; playerNumber < players.length; playerNumber++) {
+            calculateAvg(players[playerNumber], hits[playerNumber], atBats[playerNumber]);
+        }
+        break;
+    case 3:  // 3. Print all Team's Pitecher E.R.A.
+        for (let playerNumber = 0; playerNumber < players.length; playerNumber++) {
+            if (pitcher[playerNumber]) {
+                calculateERA(players[playerNumber], pRuns[playerNumber], pInning[playerNumber]);
+            }
+        }
+        break;
+    case 4: // 4. Print Indidual Player Season Details
+        let playerNumber = 3;
+        playerSeasonDetails(players[playerNumber], hits[playerNumber], atBats[playerNumber], k[playerNumber], pitcher[playerNumber], pRuns[playerNumber], pInning[playerNumber]);
+        break;
+    default:
+        console.log("I don't understand your question...")
+        break;
+}
+
+console.log('*** FINISHED ***');
+
+// if (option === 1) {
+//     for (let playerNumber = 0; playerNumber < players.length; playerNumber++) {
+//         playerSeasonDetails(players[playerNumber], hits[playerNumber], atBats[playerNumber], k[playerNumber], pitcher[playerNumber], pRuns[playerNumber], pInning[playerNumber]);
+//     }
+// } else if (option === 2) {
+//     for (let playerNumber = 0; playerNumber < players.length; playerNumber++) {
+//         calculateAvg(players[playerNumber], hits[playerNumber], atBats[playerNumber]);
+//     }
+
+// } else if (option === 3) {
+//     for (let playerNumber = 0; playerNumber < players.length; playerNumber++) {
+//         if (pitcher[playerNumber]) {
+//             calculateERA(players[playerNumber], pRuns[playerNumber], pInning[playerNumber]);
+//         }
+//     }
+
+// } else if (option === 4) {
+//     let playerNumber = 4;
+//     playerSeasonDetails(players[playerNumber], hits[playerNumber], atBats[playerNumber], k[playerNumber], pitcher[playerNumber], pRuns[playerNumber], pInning[playerNumber]);
+// }
+
+*/
+
+// switch statement
+let abbreviation;
+
+// function giveNLEastTeam(abbreviation){
+//     switch (abbreviation) {
+//         case "NYM":
+//             return "New York Mets";
+//             break;
+//         case "ATL":
+//             return "Atlanta Braves";
+//             break;
+//         case "MIA":
+//             return "Miami Marlins";
+//             break;
+//         case "PHI":
+//             return "Philadelphia Phillies";
+//             break;
+//         case "WAS":
+//             return "Washington Nationals";
+//             break;
+//         default:
+//             return "Unknown Team"
+//             break;
+//     }  
+// }
+
+//console.log(giveNLEastTeam("NYM"));
+
+let key;
+// How to replace a switch/case statement by an object
+let NLEast = {
+    "NYM": "New York Mets",
+    "ATL": "Atlanta Braves",
+    "MIA": "Miami Marlins",
+    "PHI": "Philadelphia Phillies",
+    "WAS": "Washington Nationals"
+};
+
+key = "WAS";
+console.log(NLEast[key]);
+
+
+
+
 
 
 
