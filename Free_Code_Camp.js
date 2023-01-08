@@ -622,6 +622,9 @@ console.log('*** FINISHED ***');
 */
 
 // switch statement
+
+
+/* BASEBALL TEAMS USING OBJECTS
 let abbreviation;
 
 // function giveNLEastTeam(abbreviation){
@@ -661,6 +664,213 @@ let NLEast = {
 
 key = "WAS";
 console.log(NLEast[key]);
+*/
+
+/* TESTING OBJECTS FOR PROPERTIES
+var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh"
+};
+
+
+function checkObj(checkProp){
+
+    if (myObj.hasOwnProperty(checkProp)) {
+        return myObj[checkProp];
+    } else{
+        return "Not Found"
+    }
+}
+
+
+console.log(checkObj(""));
+*/
+
+var myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP",
+        ],
+        "gold": true
+    },
+    { 
+        "artist": "beau Carnes",
+        "title": "Cereal Man ",
+        "release_year": 2003,
+        "formats": [
+            "Youtube Video"
+        ]
+    }
+    
+]
+
+
+let team = [
+    {
+        "player": "Miguel", 
+        "atBats": 20,
+        "hits": 5,
+        "k": 1,
+        "pitcher": true,
+        "pRuns": 5,
+        "pInning": 33
+    },
+    {
+        "player": "Nori", 
+        "atBats": 35,
+        "hits": 8,
+        "k": 5,
+        "pitcher": true,
+        "pRuns": 3,
+        "pInning": 15
+
+    },
+    {
+        "player": "Bill", 
+        "atBats": 33,
+        "hits": 12,
+        "k": 10,
+        "pitcher": false,
+        "pRuns": null,
+        "pInning": null
+
+    },
+    {
+        "player": "Christophe", 
+        "atBats": 15,
+        "hits": 18,
+        "k": 2,
+        "pitcher": false,
+        "pRuns": null,
+        "pInning": null
+
+    },
+    {
+        "player": "Lara", 
+        "atBats": 22,
+        "hits": 3,
+        "k": 5,
+        "pitcher": true,
+        "pRuns": 7,
+        "pInning": 28
+
+    },
+    {
+        "player": "Koji", 
+        "atBats": 44,
+        "hits": 23,
+        "k": 20,
+        "pitcher": false,
+        "pRuns": null,
+        "pInning": null
+
+    },
+    {
+        "player": "Yuki", 
+        "atBats": 23,
+        "hits": 20,
+        "k": 12,
+        "pitcher": false,
+        "pRuns": null,
+        "pInning": null
+
+    },
+    {
+        "player": "Papo", 
+        "atBats": 27,
+        "hits": 15,
+        "k": 8,
+        "pitcher": false,
+        "pRuns": null,
+        "pInning": null
+
+    },
+    {
+        "player": "Juan Carlos", 
+        "atBats": 41,
+        "hits": 10,
+        "k": 10,
+        "pitcher": true,
+        "pRuns": 7,
+        "pInning": 29
+
+    }
+
+
+];
+
+function calculateAvg(currentPlayerName, currentPlayerHits, currentPlayerAtBats){
+    let avg = currentPlayerHits / currentPlayerAtBats;
+    console.log(`${currentPlayerName} had ${currentPlayerAtBats} at bats and ${currentPlayerHits} hits`);
+    console.log(`The batting average for ${currentPlayerName} is ${avg}`);
+}
+
+function whiffs(player, strikeOuts){
+    console.log(`${player} striked out ${strikeOuts} times`);
+}
+
+function calculateERA(pitcherName, runs, innings){
+    let era = 9 * runs / innings;
+    console.log(`The pitcher ${pitcherName} had an E.R.A. of ${era}`)
+}
+
+function playerSeasonDetails(currentPlayerName, currentPlayerHits, currentPlayerAtBats, strikeOuts, isPitcher, runs, innings){
+    console.log(`***** Season Details for ${currentPlayerName} *****`)
+    calculateAvg(currentPlayerName, currentPlayerHits, currentPlayerAtBats);
+    whiffs(currentPlayerName, strikeOuts);
+    if (isPitcher) {
+        calculateERA(currentPlayerName, runs, innings);
+    } else {
+        console.log(`${currentPlayerName} is not a pitcher`);
+    }
+}
+
+// let suppose, the user has a menu with options:
+// 1. Print all Team's Season details
+// 2. Print all Team's Season batting average
+// 3. Print all Team's Pitecher E.R.A.
+// 4. Print Indidual Player Season Details
+
+
+let option = 4;
+
+switch (option) {
+    case 1:  // 1. Print all Team's Season details
+        for (let playerNumber = 0; playerNumber < team.length; playerNumber++) {
+            playerSeasonDetails(team[playerNumber].player, team[playerNumber].hits, team[playerNumber].atBats, team[playerNumber].k, team[playerNumber].pitcher, team[playerNumber].pRuns, team[playerNumber].pInning);
+        }
+
+        break;
+    case 2:  // 2. Print all Team's Season batting average
+        for (let playerNumber = 0; playerNumber < team.length; playerNumber++) {
+            calculateAvg(team[playerNumber].player, team[playerNumber].hits, team[playerNumber].atBats);
+        }
+        break;
+    case 3:  // 3. Print all Team's Pitecher E.R.A.
+        for (let playerNumber = 0; playerNumber < team.length; playerNumber++) {
+            if (team[playerNumber].pitcher) {
+                calculateERA(team[playerNumber].player, team[playerNumber].pRuns, team[playerNumber].pInning);
+            }
+        }
+        break;
+    case 4: // 4. Print Indidual Player Season Details
+        let playerNumber = 3;
+        playerSeasonDetails(team[playerNumber].player, team[playerNumber].hits, team[playerNumber].atBats, team[playerNumber].k, team[playerNumber].pitcher, team[playerNumber].pRuns, team[playerNumber].pInning);
+        break;
+    default:
+        console.log("I don't understand your question...")
+        break;
+}
+
+console.log('*** FINISHED ***');
+
+
 
 
 
