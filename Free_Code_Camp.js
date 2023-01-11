@@ -687,6 +687,7 @@ function checkObj(checkProp){
 console.log(checkObj(""));
 */
 
+/* OBJECTS
 var myMusic = [
     {
         "artist": "Billy Joel",
@@ -805,6 +806,15 @@ let team = [
 
 ];
 
+*/
+
+
+
+
+
+
+/* CALCULATE PLAYER STATS
+
 function calculateAvg(currentPlayerName, currentPlayerHits, currentPlayerAtBats){
     let avg = currentPlayerHits / currentPlayerAtBats;
     console.log(`${currentPlayerName} had ${currentPlayerAtBats} at bats and ${currentPlayerHits} hits`);
@@ -870,16 +880,262 @@ switch (option) {
 
 console.log('*** FINISHED ***');
 
+*/
+
+let myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "Jack"
+        }
+    }
+};
+
+
+let gloveBoxContents = myStorage.car.outside.trunk;
+
+let myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+//WHY CAN'T MAKE SECOND LIST???
+        ]
+    }
+];
+
+let secondTree = myPlants[1].list[1];
+
+//console.log(secondTree)
 
 
 
 
 
+let collection = {
+    "2548": {
+        "album": "slippery when wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let It Rock",
+            "You Give Love A Bad Name"
+        ]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": []
+    },
+    "5439":{
+        "album": "ABBA Gold"
+    }
+};
+
+let collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecords(id, prop, value){
+    if(value === "") {
+        delete collection[id][prop];
+    }
+
+    else if (prop === "tracks"){
+    collection[id][prop] = collection[id][prop] || [];
+    collection[id][prop].push(value);
+    } else {
+        collection[id][prop] = value;
+    }
+
+    return collection;
+}
+
+updateRecords(2468, "tracks", "test");
+//console.log(updateRecords(5439, "artist", "ABBA"));
+
+
+/*WHILE LOOPS
+let myArray = []
+
+let i = 0;
+while(i < 5) {
+    myArray.push(i);
+    i++;
+}
+
+console.log(myArray)
+*/ 
+
+/*FOR LOOP
+let ourArray = [];
+
+for (let i = 0; i < 5; i++) {
+    ourArray.push(i);
+}
+
+console.log(ourArray)
+*/
+
+/* ODD NUMBERS WITH A FOR LOOP
+let ourArray = [];
+
+for (var i = 1; i < 10; i += 2){
+    ourArray.push(i);
+}
+
+console.log(ourArray);
+*/
+
+/* COUNTING BACKAWARDS WITH A FOR LOOP
+let ourArray = [];
+
+for (var i = 10; i > 0; i -= 2){
+    ourArray.push(i);
+}
+console.log(ourArray);
+*/
+
+/* ITTERATE THROUGH AN ARRAY WITH A FOR LOOP
+let ourArr = [9, 10, 11, 12];
+let ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++){
+    ourTotal += ourArr[i];
+}
+
+//console.log(ourTotal);
+*/
+
+/* NESTING FOR LOOPS
+function multiplyAll(arr){
+    let product = 1;
+
+    for (var i=0; i < arr.length; i++) {
+        for (var j=0; j < arr[i].length; j++) {
+            product *= arr[i][j]
+        }
+        
+    }
+
+    return product;
+}
+
+let product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+console.log(product);
+*/
+
+let myArray = [];
+let i = 10;
+
+
+do {
+    myArray.push(i);
+    i++;
+} while (i < 5)
+
+//console.log(i, myArray)
 
 
 
 
+let contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0512561856",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lasrName": "Potter",
+        "number": "0994373684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    { 
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
 
 
+function lookUpProfile(name, prop){
+    for (var i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            return contacts[i][prop] || "No such property";
+        }
+    }
+    return "no such contacts";
+}
+
+let data = lookUpProfile("Akira", "likes");
+
+//console.log(data);
 
 
+/* GENERATES RANDOM NUMBERS 
+function randomFraction(){
+    
+    
+    return Math.random();
+}
+
+console.log(randomFraction());
+*/
+
+/* RANDOM FRACTIONS AND WHOLE NUMBERS 
+let randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+function randomWholeNum(){
+
+
+    return Math.floor(Math.random() * 10);
+}
+
+console.log(randomWholeNum());
+*/
+
+/* RANDOM FRACTIONS AND WHOLE NUMBERS 
+function randomRange(myMin, myMax) {
+
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+let myRandom = randomRange(5,15); 
+
+console.log(myRandom);
+*/
+
+
+function convretToInteger(str){
+    return parseInt(str, 2);
+
+}
+
+convretToInteger("10011");
