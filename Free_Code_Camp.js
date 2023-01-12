@@ -1133,9 +1133,61 @@ console.log(myRandom);
 */
 
 
+/* PARSEINT FUNCTION / TERNARY OPERATOR
 function convretToInteger(str){
     return parseInt(str, 2);
 
 }
 
 convretToInteger("10011");
+*/
+
+/*TERNARY OPERATORS
+function checkEqual(a, b) {
+    return a === b ? true : false;
+
+    return a === b;
+}
+
+checkEqual(1, 2); 
+console.log(checkEqual())
+*/
+
+/* USE MULTIPLE TERNARY OPERATORS IN ONE LINE
+function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+console.log(checkSign( 10));
+*/
+
+/* MUTATING AN ARRAY WITH CONST
+const s = [5,7,2];
+function editInPlace(){
+    "use strict"
+
+
+    s[0] = 2;
+    s[1] = 5;
+    s[2] = 7;
+}
+editInPlace();
+
+console.log(s)
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
